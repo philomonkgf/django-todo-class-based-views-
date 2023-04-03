@@ -1,0 +1,32 @@
+{%extends 'newtodo/layout.html'%}
+
+{%block body%}
+
+<div id="login">
+<h1>User Login </h1>
+
+<form method="POST">
+    {%csrf_token%}
+    <!-- {{form.as_p}} -->
+    <input type="text" name="username" placeholder="Usernname">
+    <input type="password" name="password" placeholder="Password">
+  
+    <input type="submit"> 
+</form>{%for message in messages%}
+{%if message %}
+<div style="color: red;"> {{message}}</div>
+{%endif%}
+{%endfor%}
+
+
+
+<a href="{% url 'usersignup'%}">User Signup</a><br>
+<a href="{% url 'reset_password'%}">Password Reset</a>
+</div>
+
+
+
+
+
+
+{%endblock%}

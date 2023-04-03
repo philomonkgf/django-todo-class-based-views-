@@ -1,0 +1,10 @@
+{%extends 'newtodo/layout.html'%}
+{%block body%}
+<div id="login">
+<form method="POST">
+    {%csrf_token%}
+    <p style="color: red;"> Are Your Sure You Want to delete '{{task}}'</p>
+    <input type="submit">
+</form>
+</div>
+{%endblock%}

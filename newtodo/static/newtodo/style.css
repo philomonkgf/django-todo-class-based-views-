@@ -1,0 +1,70 @@
+/* INDEX */
+
+#i{
+    float: right;
+  }
+
+a{
+    text-decoration: none;
+    color: rgb(5, 5, 5);
+  }
+.card{
+   
+    margin-left: 35%;
+    margin-top: 10%;
+    padding: 10px;
+    border-width:3px;
+    border-style:solid;
+    width: 450px;
+    border-image: linear-gradient( purple, orange,red)1;
+    box-shadow: 20px 20px rgb(177, 165, 165);
+    border-radius: 20px;
+    font: italic 1.2em "Fira Sans", serif;
+    
+  }
+
+
+#task{
+    text-align: center;
+    font-style:normal;
+   
+  }
+
+ 
+
+button{
+    background-color: aliceblue;
+    border: 1px solid red;
+    border-radius: 20px;
+  }
+
+button:hover{
+
+    transform: scale(1.5);
+}
+
+
+/* ENDINDEX */
+
+
+
+#usersigup{
+    margin-left: 35%;
+    margin-top: 10%;
+    border: 2px solid rebeccapurple;
+    width: 650px;
+    padding: 20px;
+}
+
+#login{
+    margin-left: 40%;
+    margin-top: 10%;
+    border: 2px solid rebeccapurple;
+    width: 500px;
+    height: 250px;
+    padding: 20px;
+    border-radius:20px;
+    
+
+}
+

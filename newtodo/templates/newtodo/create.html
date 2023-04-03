@@ -1,0 +1,14 @@
+{%extends 'newtodo/layout.html'%}
+{%block body%}
+
+
+<div id="login">
+<h1>Add Task</h1>
+<form method="POST">
+    {%csrf_token%}
+    {{form}}
+    <input type="submit">
+
+</form>
+</div>
+{%endblock%}

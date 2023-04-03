@@ -1,0 +1,46 @@
+{%extends 'newtodo/layout.html'%}
+
+
+
+        {%block body%}
+            <div class='card'>
+              <div> Hello! {{request.user}}</div>
+
+              <div id="i">
+              <div><a href="{% url 'logout'%}">LogOut</a></div>
+              <div><a href="{% url 'passwordchange'%}">Password Change</a></div>
+              
+              </div>
+
+
+        
+
+              <h3><a href="{% url 'create'%}">ADD TASK</a></h3><hr>
+             <div id="task">
+               {%for tasks in task%}
+
+               {%if tasks.completed == True%}
+               <div ><s> {{tasks.task|title}}  &nbsp {{tasks.data|timesince}} ago </s>&#9989;</div><br>
+               {%else%}
+               <div > {{tasks.task|title}}  &nbsp {{tasks.data|timesince}} ago</div><br>
+               {%endif%}
+
+              
+               <button><a href="{% url 'delete' tasks.id%}">Delete</a></button>&nbsp
+               <button> <a href="{% url 'edittask' tasks.id%}">Edit</a></button><br><hr>
+
+               {%endfor%}
+        
+             </div>   
+
+
+
+
+
+
+            </div>
+
+
+
+
+{%endblock%}
